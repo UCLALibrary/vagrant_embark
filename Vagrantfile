@@ -219,4 +219,12 @@ Vagrant.configure("2") do |config|
     # Message to display to user after 'vagrant up' completes
     config.vm.post_up_message = "Setup of 'vagrant-embark' is now COMPLETE!\nYou can SSH into the new VM via 'vagrant ssh'"
 
+    # Severspec test plan
+    config.spec.test_plan = [
+      {
+        'nodes' => /embark/,
+        'flags' => '--format documentation --color --pattern serverspec/embark* serverspec/shared/*'
+      }
+    ]
+
 end
