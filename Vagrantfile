@@ -191,6 +191,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :name => "running ansible-librarian-install.sh", :path => "ansible-librarian-install.sh"
 
 if config.vm.box = "hardyoyo/embark-base"
+    config.vm.provision :shell, :name => "provisioning with ansible-local and the cap-deploy playbook", :inline => "echo '   > > > Provisioning with Ansible_local and the cap-deploy playbook.'"
     # provision with ansible_local using the cap-deploy playbook
     config.vm.provision "ansible_local" do |ansible|
       ansible.playbook          = "playbook_cap-deploy.yml"
@@ -200,6 +201,7 @@ if config.vm.box = "hardyoyo/embark-base"
       ansible.inventory_path    = "/vagrant/ansible/inventory"
     end
 else
+    config.vm.provision :shell, :name => "provisioning with ansible-local and the full-build playbook", :inline => "echo '   > > > Provisioning with Ansible_local and the full-build playbook.'"
   # provision with ansible_local using the full-build playbook
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook          = "playbook_full-build.yml"
