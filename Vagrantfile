@@ -190,14 +190,25 @@ Vagrant.configure("2") do |config|
     # now run the install for Ansible Librarian
     config.vm.provision :shell, :name => "running ansible-librarian-install.sh", :path => "ansible-librarian-install.sh"
 
-    # provision with ansible_local
+if config.vm.box = "hardyoyo/embark-base"
+    # provision with ansible_local using the cap-deploy playbook
     config.vm.provision "ansible_local" do |ansible|
-      ansible.playbook          = "playbook.yml"
+      ansible.playbook          = "playbook_cap-deploy.yml"
       ansible.verbose           = "vvv"
       ansible.limit             = "local" #Yeah, don't do prod just yet, OK? Thanks!
       ansible.provisioning_path = "/vagrant/ansible"
       ansible.inventory_path    = "/vagrant/ansible/inventory"
     end
+else
+  # provision with ansible_local using the full-build playbook
+  config.vm.provision "ansible_local" do |ansible|
+    ansible.playbook          = "playbook_full-build.yml"
+    ansible.verbose           = "vvv"
+    ansible.limit             = "local" #Yeah, don't do prod just yet, OK? Thanks!
+    ansible.provisioning_path = "/vagrant/ansible"
+    ansible.inventory_path    = "/vagrant/ansible/inventory"
+  end
+end
 
 
     # Load any local customizations from the "local-bootstrap.sh" script (if it exists)
