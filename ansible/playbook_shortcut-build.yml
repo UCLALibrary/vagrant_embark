@@ -17,7 +17,6 @@
   roles:
     # ALL OF THE FOLLOWING ROLES ARE RUN ON THE EMBARK-BASE box and are not necessary for this box
     # leaving them here in case we need them
-      
     # - { role: uclalib_role_rhel7repos }
     # - { role: ansible-packages }
     # - { role: uclalib_role_epel }
@@ -41,6 +40,5 @@
     # - { role: uclalib_role_nodejs, nodejs_version: '8' }
     # - { role: uclalib_role_yarn }
     # - { role: uclalib_role_redis }
-
     # ONLY THE FINAL ROLE IS CALLED, TO FINISH THE CAP DEPLOY SETUP
       - { role: uclalib_role_samvera_capdeploy }

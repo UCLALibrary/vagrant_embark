@@ -190,11 +190,11 @@ Vagrant.configure("2") do |config|
     # now run the install for Ansible Librarian
     config.vm.provision :shell, :name => "running ansible-librarian-install.sh", :path => "ansible-librarian-install.sh"
 
-if config.vm.box = "hardyoyo/embark-base"
-    config.vm.provision :shell, :name => "provisioning with ansible-local and the cap-deploy playbook", :inline => "echo '   > > > Provisioning with Ansible_local and the cap-deploy playbook.'"
-    # provision with ansible_local using the cap-deploy playbook
+if config.vm.box == "hardyoyo/embark-base"
+    config.vm.provision :shell, :name => "provisioning with ansible-local and the shortcut-build playbook", :inline => "echo '   > > > Provisioning with Ansible_local and the cap-deploy playbook.'"
+    # provision with ansible_local using the shortcut-build playbook
     config.vm.provision "ansible_local" do |ansible|
-      ansible.playbook          = "playbook_cap-deploy.yml"
+      ansible.playbook          = "playbook_shortcut-build.yml"
       ansible.verbose           = "vvv"
       ansible.limit             = "local" #Yeah, don't do prod just yet, OK? Thanks!
       ansible.provisioning_path = "/vagrant/ansible"
