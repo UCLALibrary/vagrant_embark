@@ -236,7 +236,7 @@ end
     config.spec.test_plan = [
       {
         'nodes' => /embark/,
-        'flags' => '--format documentation --color --pattern serverspec/embark* serverspec/shared/*'
+        'flags' => '--format documentation --color --pattern serverspec/embark*'
       }
     ]
 

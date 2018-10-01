@@ -50,7 +50,7 @@ Vagrant has a robust community of plugin developers, and some of the plugins are
 > ... but, you'll really have a better time if you also run this command to
 > install a few *more* plugins...
 >
-> `vagrant plugin install vagrant-vbguest vagrant-cachier vagrant-notify`
+> `vagrant plugin install vagrant-vbguest vagrant-cachier vagrant-notify vagrant-spec`
 
 * [Vagrant-ENV](https://github.com/gosuri/vagrant-env) is *required*, in order to use this project.
 * [Vagrant-registration](https://github.com/projectatomic/adb-vagrant-registration) is *strongly recommended*,
@@ -64,6 +64,7 @@ The following Vagrant plugins are not required, but they do make using Vagrant m
 * [Vagrant-VBGuest](https://github.com/dotless-de/vagrant-vbguest) - *Highly Recommended for VirtualBox* as it keeps VirtualBox Guest Additions up to date
 * [Vagrant-Cachier](https://github.com/fgrehm/vagrant-cachier) - Caches packages between VMs. (Project now unmaintained, see URL)
 * [Vagrant-Notify](https://github.com/fgrehm/vagrant-notify)
+* [Vagrant-Spec](https://github.com/hashicorp/vagrant-spec)
 
 
 ## Attribution
