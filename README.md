@@ -1,6 +1,6 @@
 # Vagrant-Embark
 
-A simplistic Vagrant dev environment for starting any sort of web development project that will run on CentOS or RedHat Enterprise Linux/RHEL, and do so with Ansible for provisioning. Uses [Librarian-Ansible](https://github.com/bcoe/librarian-ansible) to handle downloading Ansible roles.
+A simplistic Vagrant devops environment for starting any sort of web development project that will run on CentOS or RedHat Enterprise Linux/RHEL, and do so with Ansible for provisioning. Uses [Librarian-Ansible](https://github.com/bcoe/librarian-ansible) to handle downloading Ansible roles.
 
 Need more roles? Add them to the Ansiblefile. Call them in the playbook.
 
