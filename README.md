@@ -70,7 +70,7 @@ The following Vagrant plugins are not required, but they do make using Vagrant m
 
 ## How to run the Serverspec tests
 
-If you'd installed the [Vagrant-Spec](https://github.com/hashicorp/vagrant-spec) plugin, after you run `vagrant up` and it completes sucessfully, then run `vagrant spec test`. You can add more tests as you need them, and then re-run `vagrant spec test` to run them.
+If you have installed the [Vagrant-Spec](https://github.com/hashicorp/vagrant-spec) plugin, after you run `vagrant up` and it completes sucessfully, then run `vagrant spec test`. You can add more tests as you need them, and then re-run `vagrant spec test` to run them.
 
 ## Attribution
 
