@@ -105,7 +105,7 @@ role "uclalib_role_redis",
       git: "git@github.com:UCLALibrary/uclalib_role_redis"
 
 role "uclalib_role_samvera_capdeploy",
-      git: "git@github.com:hardyoyo/uclalib_role_samvera_capdeploy", ref: "origin/faster"
+      git: "git@github.com:UCLALibrary/uclalib_role_samvera_capdeploy"
 
 # more roles can be added here, you can pull them from GitHub or from Ansible Galaxy
 # docs here: https://github.com/bcoe/librarian-ansible
