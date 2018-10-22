@@ -83,4 +83,4 @@ ssh_pub_keys:
 java_packages:
         - java-1.8.0-openjdk-devel.x86_64
 
-oracle_java_version: "1.8.0_181"
+oracle_java_version: "1.8.0_191"

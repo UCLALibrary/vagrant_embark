@@ -17,10 +17,10 @@ shared_examples 'database::init' do
   # define required packages
   packages = {
     'mysql-community-common' => {
-      version: '5.6.41'
+      version: '5.6.42'
     },
     'mysql-community-client' => {
-      version: '5.6.41'
+      version: '5.6.42'
     }
   }
 
