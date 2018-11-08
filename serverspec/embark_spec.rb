@@ -20,4 +20,8 @@ describe 'embark' do
 
     # TODO verify command outputs
 
+    describe command("curl -ksH 'Accept-encoding: gzip' https://embark.vagrant.test/ | gunzip -t -") do
+      its(:exit_status) { should eq 0 }
+    end
+
 end
